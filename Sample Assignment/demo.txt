@@ -1,0 +1,7 @@
+start
+read b,A
+resq a
+mover argc,g
+print a
+stop
+end
