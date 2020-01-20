@@ -1,0 +1,7 @@
+start 100
+print a
+read l
+loop movem areg,m
+m ds 1
+='8'
+='7'

@@ -1,0 +1,74 @@
+ if(str.compare("start") && bit==0)
+			  {
+			    bit=1;
+			    word="";
+			    continue;
+			  }
+			   //checking for start
+			  else if(isconstant(word) && bit==1)
+				  {
+				    lc=atoi(word.c_str());
+				    fout<<"(ad,"<<lc<<")"<<"\n";
+				    bit=2;//end of start
+				    word="";
+				    continue;
+				  }
+			  else if(bit==1 && !isconstant(word))
+				  {
+				    cout<<"**Error** at start";
+				    word="";
+				    break;
+				  }
+			  
+			  
+			  if(str.compare("origin") && bit1==0)
+			  {
+			    bit1=1;
+			    word="";
+			    continue;
+			  }
+			  else  if(isconstant(word) && bit1==1)
+				  {
+				    lc=atoi(word.c_str());
+				    fout<<"(ad,"<<lc<<")"<<"\n";
+				    bit1=2;//end of origin/
+				    word="";
+				    continue;
+				  }
+			  
+			  else if(bit1==1 && !isconstant(word))
+				  {
+				    cout<<bit1;
+				    cout<<"**Error** at origin";
+				    word="";
+				    break;
+				  }
+			  
+			  
+			  if(str.compare("read") && readbit==0)
+			  {
+			    readbit=1;
+			    word="";
+			    continue;
+			  }
+			  
+			  if(str.compare("areg") || str.compare("breg") || str.compare("breg") || str.compare("breg"))
+			  {
+				rbit=1;
+			  }
+			
+			 
+			 
+			  //literal
+			  /*else if(isliteral(word) && rbit==1)
+			  {
+			     cout<<"literal found";
+			  }*/
+			  //variabble
+			  
+			   
+			
+			
+		
+		      
+			word="";
