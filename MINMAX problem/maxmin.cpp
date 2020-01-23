@@ -16,7 +16,7 @@ void out(int *a,int n)
 	cout<<"Your array:\n";
 	for(int i=0;i<n;i++)
 	{
-	  cout<<a[i]<<"\t";
+	  cout<<"-"<<a[i]<<"-\t";
 	}
 	cout<<"\n";
 }
@@ -27,24 +27,24 @@ int* minmax(int *a,int low,int high)
 	  int *temp;
 	  temp = new int[2];  
 	  
-	  if(high == 0)//if only one element is present
+	  if(high == low)//if only one element is present
 	  {
-	    temp[0] = a[0];
-	    temp[1] = a[0];
+	    temp[0] = a[low];
+	    temp[1] = a[low];
 	    return temp;
 	  }
-	  else if(high == 1)//if two elements are present
+	  else if(high-low == 1)//if two elements are present
 	  {
-	    if(a[0] < a[1])
+	    if(a[low] < a[high])
 	    {
-	      temp[0] = a[0];
-	      temp[1] = a[1];
+	      temp[0] = a[low];
+	      temp[1] = a[high];
 	      return temp;
 	    }
 	    else
 	    {
-	      temp[0] = a[1];
-	      temp[1] = a[0];
+	      temp[0] = a[high];
+	      temp[1] = a[low];
 	      return temp;
 	    }
 	  }
@@ -60,23 +60,17 @@ int* minmax(int *a,int low,int high)
 	     
 	     //final min
 	     if(Ltemp[0] < Rtemp[0])
-	     {
 	       min = Ltemp[0];
-	     }
 	     else
-	     {
 	       min = Rtemp[0];
-	     }
+	     
 	     
 	     //final max
 	     if(Ltemp[1] < Rtemp[1])
-	     {
-	       max = Rtemp[1];
-	     }
+	       max = Rtemp[1];	    
 	     else
-	     {
 	       max = Ltemp[1];
-	     }
+	     
 	    
 	     temp[0] = min;
 	     temp[1] = max;
@@ -105,9 +99,9 @@ int main()
 				out(a,n);
 	
 				output = minmax(a,0,n-1);
-				cout<<"MIN:"<<output[0]<<"\nMAX:"<<output[1];
+				cout<<"\nMinimum:"<<output[0]<<"\nMaximum:"<<output[1]<<"\n";
 				break;
-		        case 2:
+		    case 2:
 				return 0;
 			default:
 				cout<<"You have entered the wrong choice...\n";
