@@ -1,2 +1,2 @@
 optimal solution on tape problem using c++...
-It shows the Minimuin retrival time for each tape
+It shows the Minimuin retrival time for each tape with time complexity of n^2;
