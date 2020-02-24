@@ -1,2 +1,13 @@
 #include<stdio.h>
-hii new patil
+#include<conio.h>
+int main()
+{
+	int a=10,b=20,c;
+	float aaa = 101;
+	c=a+b;
+	c++;
+	a--;
+	printf("addition is %d",c);
+	printf("hello niranjan");
+	return 0;
+}

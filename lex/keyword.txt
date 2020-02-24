@@ -1,7 +1,9 @@
-#include
+include
 stdio.h
 conio.h
-auto 	
+auto
+printf
+scanf 	
 double 	
 int 	
 struct
