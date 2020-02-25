@@ -1,0 +1,8 @@
+0	main
+1	dew
+2	a
+3	b
+4	c
+5	aaa
+6	addition is  d 
+7	hello niranjan 
